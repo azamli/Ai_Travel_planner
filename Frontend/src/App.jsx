@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-const API_BASE = "http://localhost:8001";
+const API_BASE = "https://ai-travel-planner-mqvw.onrender.com";
 
 const STATUS_MESSAGES = [
   "Reading your request…",
