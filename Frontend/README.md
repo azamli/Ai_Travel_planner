@@ -1,71 +1,16 @@
-# AI Travel Planner — Frontend
+# React + Vite
 
-This is the frontend for my AI Travel Planner project. It's a React app (built with Vite) that lets you type a trip in plain English and get flights, hotels, and a full itinerary back from the backend.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Tech Used
+Currently, two official plugins are available:
 
-- React (Vite)
-- Plain CSS (no framework like Tailwind/Bootstrap)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Features
+## React Compiler
 
-- Search bar to type your trip
-- Destination cards (Tokyo, Paris, Bangkok, Rome, Dubai) you can click to auto-search
-- Quick prompt suggestions
-- Shows flight results with prices + "Book on Skyscanner" button
-- Shows hotel results + "Book Hotel" button (Booking.com)
-- Shows AI-generated itinerary
-- History sidebar to revisit past searches
-- Download full plan as a text file
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## How to run locally
+## Expanding the Oxlint configuration
 
-```
-npm install
-npm run dev
-```
-
-This will start the app at `http://localhost:5173` (or another port if that one's busy).
-
-## Connecting to backend
-
-Open `src/App.jsx` and check this line near the top:
-
-```js
-const API_BASE = "http://localhost:8001";
-```
-
-Change this to wherever your backend is running. For local testing it stays as above. After deploying the backend (e.g. on Render), change it to the live backend URL, like:
-
-```js
-const API_BASE = "https://your-backend.onrender.com";
-```
-
-## Deployment
-
-Deployed on **Vercel**.
-
-- Root directory: `frontend`
-- Vercel auto-detects Vite and builds it — no extra config needed
-- Make sure `API_BASE` points to the live backend before deploying
-
-## Folder structure
-
-```
-frontend/
-├── public/
-│   ├── azam.jpg
-│   ├── favicon.svg
-│   └── icons.svg
-├── src/
-│   ├── App.jsx
-│   ├── App.css
-│   └── main.jsx
-├── index.html
-├── package.json
-└── vite.config.js
-```
-
-## Made by
-
-Azam Ali & Aalam Ansari
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
